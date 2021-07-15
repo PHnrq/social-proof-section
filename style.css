@@ -61,6 +61,7 @@ main{
 }
 
 .star-content{
+    display: flex;
     background-color: var(--ligth-grayish-magenta);
     margin-bottom: 1.6rem;
     padding: 1.6rem 5.2rem 1.6rem 1.6rem;
@@ -128,4 +129,107 @@ main{
     color: var(--ligth-grayish-magenta);
     font-size: 1.2rem;
     line-height: 2rem;
+}
+
+@media screen and (max-width:1125px){
+    .star-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 1.6rem;
+        padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+
+        font-size: 1.4rem;
+        font-style: bold;
+        font-weight: 700;
+    }
+   
+    .star-content:nth-child(1){
+    position: unset;
+    left: unset;
+    }
+
+    .star-content:nth-child(2){
+    position: unset;
+    left: unset;
+    }
+}
+
+@media screen and (max-width: 825px){
+    body{
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    }
+
+    main{
+        width: 95%;
+    }
+
+    .first-content, .second-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .descripion{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+    .descripion p{
+        margin-bottom: 1.6rem;
+        
+    }
+    
+    .stars{
+        width: 100%;
+    }
+
+    .star-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 1.6rem;
+        padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+
+        font-size: 1.4rem;
+        font-style: bold;
+        font-weight: 700;
+    }
+    
+    .last-star{
+        margin-right:unset;
+    }    
+    .reviews-card{
+        width: 100%;
+        padding: 2.4rem;
+        margin-block: 1.6rem;
+        margin-inline-end: 1.6rem;
+    
+        background-color: var(--very-dark-magenta);
+        border-radius: .8rem;
+    }
+    
+    .reviews-card:nth-child(2){
+        position: unset;
+        top: unset;
+    }
+    
+    .reviews-card:nth-child(3){
+        position: unset;
+        top: unset;
+    }
+    
+    .reviews-card h4{
+        margin-block-end: 1.6rem;
+    }
+
+    footer{
+        position: relative;
+        top: -30px;
+    }
 }
